@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexical Analyzer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-icon"></div>
+            <h1>Web-Based Lexical Analyzer</h1>
+            <p>Paste your code below or upload a file — we'll tokenize it instantly.</p>
+        </header>
+
+        <!-- Input Card -->
+        <section class="input-card">
+            <textarea id="codeInput" rows="6" placeholder="// Paste your source code here...&#10;int main() {&#10;    return 0;&#10;}"></textarea>
+
+            <!-- Action Bar -->
+            <div class="action-bar">
+                <div class="file-upload-wrapper">
+                    <label for="fileUpload" class="file-btn"> Choose File</label>
+                    <input type="file" id="fileUpload" accept=".txt,.py,.cpp,.c,.java,.docx" />
+                    <span id="fileStatus" class="file-status">No file chosen</span>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="convertBtn" class="btn-primary"> Convert</button>
+                    <button id="clearBtn" class="btn-secondary">✖ Clear</button>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message">Ready to tokenize.</div>
+        </section>
+
+        <!-- Output Card -->
+        <section class="output-card">
+            <div class="result-header">
+                <h2> Tokenization Results</h2>
+                <span id="tokenCount" class="badge">0 tokens found</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table id="resultTable">
+                    <thead>
+                        <tr>
+                            <th>Lexeme</th>
+                            <th>Token Type</th>
+                            <th>Line</th>
+                            <th>Column</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr class="empty-state">
+                            <td colspan="4">Waiting for your code...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
