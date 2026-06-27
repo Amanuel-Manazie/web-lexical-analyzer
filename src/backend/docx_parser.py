@@ -69,7 +69,7 @@ def extract_text_from_docx(file_obj):
         return result
         
     except Exception as e:
-        print(f"❌ ERROR in docx_parser: {e}")
+        print(f" ERROR in docx_parser: {e}")
         import traceback
         traceback.print_exc()
         raise ValueError(f"Could not parse .docx file: {str(e)}")
