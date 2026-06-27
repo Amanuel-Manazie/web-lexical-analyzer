@@ -22,5 +22,5 @@ A web application that converts source code into lexemes and tokens with maximum
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/web-lexical-analyzer.git
+git clone https://github.com/Amanuel-Manazie/web-lexical-analyzer.git
 cd web-lexical-analyzer
